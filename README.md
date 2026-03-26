@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# NU.CODE - Nile University Coding Club
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page built for the Nile University student developer community. This project focuses on clean UI/UX and component-based architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Idea
+The **NU.CODE Landing Page** is a digital hub for student developers at Nile University. The goal is to provide a central location where students can explore different technical tracks, learn about the club's mission, and join the community. It is built using **React** for functionality and **Tailwind CSS** for rapid, modern styling.
 
-## React Compiler
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/e795cfdc-3ccf-4cc9-8540-c594bb95a2f0" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+```text
+task3/
+├── src/
+│   ├── components/       # Reusable UI building blocks
+│   │   ├── Navbar.tsx    # Responsive navigation & branding
+│   │   ├── Hero.tsx      # High-impact welcome section
+│   │   ├── Card.tsx      # Reusable track information cards
+│   │   └── Footer.tsx    # Multi-column site information
+│   ├── App.tsx           # Main page assembly & layout
+│   ├── main.tsx          # Entry point & global style injection
+│   └── index.css         # Tailwind CSS directives
+├── tailwind.config.js    # Design system configuration
+└── package.json          # Project dependencies & scripts
 ```
+## Components Used
+- Navbar: A sticky header with responsive navigation links (to be updated).
+- Hero: An introductory section with a Call-to-Action and subtext.
+- Card (Reusable): A flexible component used multiple times to display the Competitive Programming, Mobile Dev, and Web Dev tracks.
+- Footer: A dark-themed section organized into grids.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## How to Run
+1. Clone the repository
+2. Navigate to the project directory
+3. Install the dependencies (run: npm install)
+4. Launch the development server (run: npm run dev)
+5. View the project (open the local URL provided in your terminal)
