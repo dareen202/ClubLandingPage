@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-40">
         
         <div className="col-span-1 md:col-span-1">
-          <h3 className="text-xl font-bold text-white mb-4">NUICPC</h3>
+          <h3 className="text-xl font-bold text-white mb-4">NU.CODE</h3>
           <p className="text-sm leading-relaxed">
             Empowering students at Nile University to master problem-solving and software engineering.
           </p>
